@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 style="font-size:45px;">Log your session!<h2>
+  <STYLE type="text/css">
+    h2 {
+      text-align: left;
+      font-size: 100%;
+      color: "#C0C0C0";
+    }
+  </STYLE>
+<form method="POST" class="post-form">{% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="save btn btn-default">Save</button>
+</form>
+
+{% endblock %}
