@@ -16,12 +16,18 @@ COMPASS_DIRS = (
 )
 
 SURF_QUALITY = (
-    ('1', 'FLAT'), ('2', 'VERY POOR'), ('3' ,'POOR'), ('4' ,'POOR to FAIR'),
-    ('5' ,'FAIR'), ('6' ,'FAIR to GOOD'), ('7' ,'GOOD'), ('8' ,'VERY GOOD'),
-    ('9' ,'GOOD to EPIC'), ('10' ,'EPIC'),
+    (1, 'FLAT'), (2, 'VERY POOR'), (3 ,'POOR'), (4 ,'POOR to FAIR'),
+    (5 ,'FAIR'), (6 ,'FAIR to GOOD'), (7 ,'GOOD'), (8 ,'VERY GOOD'),
+    (9 ,'GOOD to EPIC'), (10 ,'EPIC'),
 )
 
 DEGREES = [(degree, degree) for degree in range(0,361)]
+
+THREE_HR_INCREMENTS = [
+    ('00:00:00','00:00:00'), ('03:00:00','03:00:00'), ('06:00:00','06:00:00'),
+    ('09:00:00','09:00:00'), ('12:00:00','12:00:00'), ('15:00:00','15:00:00'),
+    ('18:00:00','18:00:00'), ('21:00:00','21:00:00'),
+]
 
 GROWTH_DIRECTIONS = ((0, 0),(1, 1))
 

@@ -4,8 +4,8 @@ from __future__ import unicode_literals
 from django.contrib import admin
 
 from .models import (
-    SURFER, ANNOTATION, READING_INCREMENT, BEACH, REGION, LIGHTING,
-    WIND, SWELL, BUOY_READING, WEATHER, TIDE
+    SURFER, ANNOTATION, READING_INCREMENT, BEACH, REGION, LIGHTING, BEACH_BUOYS,
+    WIND, SWELL, BUOY_READING, WEATHER, TIDE, WETSUIT, SURFLINE_REPORT
 )
 
 # Register your models here.
@@ -20,3 +20,6 @@ admin.site.register(SWELL)
 admin.site.register(BUOY_READING)
 admin.site.register(WEATHER)
 admin.site.register(TIDE)
+admin.site.register(WETSUIT)
+admin.site.register(SURFLINE_REPORT)
+admin.site.register(BEACH_BUOYS)
