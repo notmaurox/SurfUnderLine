@@ -1,4 +1,5 @@
 from django import forms
+import datetime
 
 from models import (
     COMPASS_DIRS, SURF_QUALITY, RANGE_1_TO_10, BEACH, READING_INCREMENT,
@@ -25,6 +26,7 @@ class ReportSurfSession(forms.Form):
     surf_spot = forms.ChoiceField(
         choices=[(object.name, object.name )for object in BEACH.objects.all()]
     )
+    day = forms.DateField(initial=datetime.date.today)
     time = forms.ChoiceField(
         choices=THREE_HR_INCREMENTS,
         help_text='Pick a time closest to the middle point of your session'
