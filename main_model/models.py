@@ -77,13 +77,13 @@ class SURFLINE_REPORT(models.Model):
         choices=SURF_QUALITY
     )
     wetsuit = models.ForeignKey(
-        WETSUIT, on_delete=models.SET_NULL, null=True
+        WETSUIT, on_delete=models.SET_NULL, null=True, blank=True
     )
     beach = models.ForeignKey(
-        BEACH, on_delete=models.CASCADE, null=True
+        BEACH, on_delete=models.CASCADE, null=True, blank=True
     )
     region = models.ForeignKey(
-        REGION, on_delete=models.CASCADE, null=True
+        REGION, on_delete=models.CASCADE, null=True, blank=True
     )
     reading_increment = models.ForeignKey(
         READING_INCREMENT, on_delete=models.CASCADE, null=False
@@ -145,7 +145,7 @@ class BUOY_READING(models.Model):
     buoy_reading_id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=45)
     sig_wave_height = models.FloatField()
-    peack_period = models.IntegerField()
+    peak_period = models.IntegerField()
     mean_wave_direction_degree = models.IntegerField(
         choices=DEGREES
     )
@@ -153,6 +153,9 @@ class BUOY_READING(models.Model):
         BEACH,
         through='BEACH_BUOYS',
         through_fields=('buoy_reading', 'beach')
+    )
+    reading_increment = models.ForeignKey(
+        READING_INCREMENT, on_delete=models.CASCADE, null=False
     )
     
 class BEACH_BUOYS(models.Model):
@@ -186,7 +189,7 @@ class SWELL(models.Model):
         READING_INCREMENT, on_delete=models.CASCADE, null=False
     )
     buoy_reading = models.ForeignKey(
-        BUOY_READING, on_delete=models.SET_NULL, null=True
+        BUOY_READING, on_delete=models.SET_NULL, null=True, blank=True
     )
     
 class WEATHER(models.Model):
