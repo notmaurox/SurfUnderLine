@@ -1,7 +1,7 @@
 # SurfUnderLine
 Database project to help surfers better understand and predict surf conditions as completed for Principals of Database Systems class
 
-## database_design_documentation
+## database_design_documentation.pdf
 
 This document describes the design and implementation of a relational database which aims to record metrics involved in predicting surf conditions from popular surf resource Surfline.com. Surfers sometimes find themselves disagreeing with the predictions Surfline makes about surf quality, these moments of disagreement provide an opportunity to study gaps in Surfline’s knowledge. Surfers know their local beaches best and a collection of surfers from the same area know their beaches even better. The goal of this project was to develop a system for tracking surf metrics, saving historical Surfline predictions, and recording surfer’s feedback on how good those predictions were.
 
